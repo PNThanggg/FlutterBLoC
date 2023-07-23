@@ -1,5 +1,5 @@
-import 'package:bloc_02/count/count.dart';
-import 'package:bloc_02/count/state/counter_state.dart';
+import 'package:bloc_02/logic/cubit/counter_cubit.dart';
+import 'package:bloc_02/logic/state/counter_state.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -20,7 +20,7 @@ void main() {
       () {
         expect(
           counterCubit?.state,
-          const CounterState(counterValue: 0),
+          CounterState(counterValue: 0),
         );
       },
     );
@@ -30,7 +30,7 @@ void main() {
       build: () => counterCubit!,
       act: (cubit) => cubit.increment(),
       expect: () => [
-        const CounterState(counterValue: 1, isIncrement: true),
+        CounterState(counterValue: 1, wasIncremented: true),
       ],
     );
 
@@ -39,7 +39,7 @@ void main() {
       build: () => counterCubit!,
       act: (cubit) => cubit.decrement(),
       expect: () => [
-        const CounterState(counterValue: -1, isIncrement: false),
+        CounterState(counterValue: -1, wasIncremented: false),
       ],
     );
   });
