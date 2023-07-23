@@ -17,4 +17,6 @@ Counter BLoC Flutter App
 │   └── main.dart
 ├── pubspec.lock
 ├── pubspec.yaml
+├── test
+│   └── counter_cubit_test.dart
 ```
