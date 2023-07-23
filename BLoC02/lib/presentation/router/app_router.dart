@@ -10,32 +10,32 @@ class AppRouter {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(
-          builder: (_) => HomeScreen(
+          builder: (_) => const HomeScreen(
             title: "Home Screen",
             color: Colors.blueAccent,
           ),
         );
       case '/second':
         return MaterialPageRoute(
-          builder: (_) => SecondScreen(
+          builder: (_) => const SecondScreen(
             title: "Second Screen",
             color: Colors.redAccent,
           ),
         );
       case '/third':
         return MaterialPageRoute(
-          builder: (_) => ThirdScreen(
+          builder: (_) => const ThirdScreen(
             title: "Thirst Screen",
             color: Colors.greenAccent,
           ),
         );
       case '/settings':
         return MaterialPageRoute(
-          builder: (_) => SettingsScreen(),
+          builder: (_) => const SettingsScreen(),
         );
       default:
         return MaterialPageRoute(
-          builder: (_) => HomeScreen(
+          builder: (_) => const HomeScreen(
             title: "Home Screen",
             color: Colors.blueAccent,
           ),
