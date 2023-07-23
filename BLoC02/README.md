@@ -1,7 +1,7 @@
 # bloc_02
 
 Counter BLoC Flutter App
-
+```
 ├── lib
 │   ├── app.dart
 │   ├── counter
@@ -16,3 +16,4 @@ Counter BLoC Flutter App
 │   └── main.dart
 ├── pubspec.lock
 ├── pubspec.yaml
+```
