@@ -4,8 +4,7 @@ part 'remote_event.dart';
 part 'remote_state.dart';
 
 class RemoteBloc {
-  var state =
-      RemoteState(0); // init giá trị khởi tạo của RemoteState. Giả sử TV ban đầu có âm lượng 70
+  var state = RemoteState(0);
 
   // quản lý event, đảm nhận nhiệm vụ nhận event từ UI
   final eventController = StreamController<RemoteEvent>();
@@ -34,7 +33,6 @@ class RemoteBloc {
     });
   }
 
-  // khi không cần thiết thì close tất cả controller
   void dispose() {
     stateController.close();
     eventController.close();
