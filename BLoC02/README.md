@@ -8,11 +8,12 @@ Counter BLoC Flutter App
 │   │   ├── counter.dart
 │   │   ├── cubit
 │   │   │   └── counter_cubit.dart
+│   │   └── state
+│   │   │   ├── counter_sate.dart
 │   │   └── view
 │   │       ├── counter_page.dart
 │   │       ├── counter_view.dart
 │   │       └── view.dart
-│   ├── counter_observer.dart
 │   └── main.dart
 ├── pubspec.lock
 ├── pubspec.yaml
