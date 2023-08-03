@@ -1,0 +1,27 @@
+import 'dart:math';
+
+class GUIGen {
+  static String generate() {
+    Random random = Random(DateTime.now().millisecond);
+
+    const String hexDigits = "0123456789abcdef";
+    final List<String> uuid = List.filled(36, '', growable: true);
+
+    for (int index = 0; index < 36; index++) {
+      final int hexPos = random.nextInt(16);
+      uuid[index] = (hexDigits.substring(hexPos, hexPos + 1));
+    }
+
+    int pos = (int.parse(uuid[19], radix: 16) & 0x3) | 0x8;
+
+    uuid[14] = '4';
+    uuid[19] = hexDigits.substring(pos, pos + 1);
+
+    uuid[8] = uuid[13] = uuid[18] = uuid[23] = '-';
+
+    final StringBuffer buffer = StringBuffer();
+    buffer.writeAll(uuid);
+
+    return buffer.toString();
+  }
+}
